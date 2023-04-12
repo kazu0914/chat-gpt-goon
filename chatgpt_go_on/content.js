@@ -18,7 +18,7 @@ sampleButton.addEventListener('click', () => {
       console.log('Textarea not found...');
     }
 });
-// ボタンをチャット入力欄の右側に表示
+// ボタンをチャット入力欄の右上に表示
 const chatInputArea = document.querySelector('textarea');
 const chatInputWrapper = chatInputArea.parentElement;
 chatInputWrapper.style.position = 'relative';
