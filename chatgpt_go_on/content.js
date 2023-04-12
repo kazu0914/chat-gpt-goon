@@ -1,9 +1,3 @@
-// CSSファイルを読み込む
-const style = document.createElement('link');
-style.rel = 'stylesheet';
-style.type = 'text/css';
-style.href = chrome.runtime.getURL('styles/style.css');
-document.head.appendChild(style);
 
 // サンプルボタンを作成
 const sampleButton = document.createElement('button');
