@@ -1,3 +1,20 @@
+// default で GPT-4モデルを選択する関数
+const redirectToGPT4 = () => {
+  if (window.location.href === 'https://chat.openai.com/chat') {
+    window.location.href = 'https://chat.openai.com/chat?model=gpt-4';
+  }
+};
+
+// 最初のページのロード時にリダイレクトを実行
+redirectToGPT4();
+
+// ページ内での URL 変更を監視してリダイレクトを実行
+const pushStateOriginal = history.pushState;
+history.pushState = function () {
+  pushStateOriginal.apply(this, arguments);
+  redirectToGPT4();
+};
+
 // サンプルボタンを作成
 const sampleButton = document.createElement('button');
 sampleButton.innerText = 'Go on';
