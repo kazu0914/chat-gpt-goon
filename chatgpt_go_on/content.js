@@ -1,9 +1,3 @@
-// CSSファイルを読み込む
-const style = document.createElement('link');
-style.rel = 'stylesheet';
-style.type = 'text/css';
-style.href = chrome.runtime.getURL('styles/style.css');
-document.head.appendChild(style);
 
 // サンプルボタンを作成
 const sampleButton = document.createElement('button');
@@ -24,7 +18,7 @@ sampleButton.addEventListener('click', () => {
       console.log('Textarea not found...');
     }
 });
-// ボタンをチャット入力欄の右側に表示
+// ボタンをチャット入力欄の右上に表示
 const chatInputArea = document.querySelector('textarea');
 const chatInputWrapper = chatInputArea.parentElement;
 chatInputWrapper.style.position = 'relative';

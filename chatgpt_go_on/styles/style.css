@@ -2,7 +2,9 @@
 
 .go-on-button {
   position: absolute;
-  bottom: 0;
+  bottom: calc(100% + 10px);
+  right: 0;
+  width: max-content;
   background: var(--gradient-primary);
   font-size: 16px;
   padding: 10px 20px;
