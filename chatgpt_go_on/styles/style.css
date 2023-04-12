@@ -1,0 +1,19 @@
+/* styles/style.css */
+
+.go-on-button {
+  position: absolute;
+  bottom: 0;
+  background: var(--gradient-primary);
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.go-on-button:hover {
+  background: var(--gradient-primary);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
