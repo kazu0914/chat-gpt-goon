@@ -56,3 +56,30 @@ const observer = new MutationObserver(() => {
 });
 
 observer.observe(document.body, { childList: true, subtree: true });
+
+// 新しいチャットが作成されたときに GPT-4 を選択する
+const redirectWithGPT4 = (button) => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.location.href = 'https://chat.openai.com/chat?model=gpt-4';
+  });
+};
+
+const newChatObserver = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    if (mutation.type === 'childList') {
+      const newChatButtonXPath = '//*[@id="__next"]/div[2]/div[1]/div/div/nav/a[1]';
+      const newChatButtonIterator = document.evaluate(newChatButtonXPath, document, null, XPathResult.ANY_TYPE, null);
+      const newChatButton = newChatButtonIterator.iterateNext();
+      
+      if (newChatButton) {
+        redirectWithGPT4(newChatButton);
+      }
+    }
+  });
+});
+
+newChatObserver.observe(document.body, {
+  childList: true,
+  subtree: true,
+});
