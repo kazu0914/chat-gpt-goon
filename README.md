@@ -1,4 +1,4 @@
-# chat-gpt-goon
+# chatgpt-next-gen
 ChatGPTの文章が途切れた時専用の「go on」ボタンを入力して、続きの文章を生成する拡張ツール
 
 # 導入の手順
