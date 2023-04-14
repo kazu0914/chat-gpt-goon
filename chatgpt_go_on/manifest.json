@@ -9,7 +9,8 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://chat.openai.com/chat/*"],
+      // "matches": ["https://chat.openai.com/chat*"],
+      "matches": ["https://chat.openai.com/*"],
       "css": ["styles/style.css"],
       "js": ["content.js"]
     }
