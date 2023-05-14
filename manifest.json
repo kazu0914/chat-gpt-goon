@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "chatgpt-next-gen",
+  "version": "1.0",
+  "description": "ChatGPTの文章が途切れた時に「go on」ボタンを表示されます。このボタンを押すことで、途中で途切れた文章を続けて生成します。",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*"],
+      "css": ["styles/style.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
